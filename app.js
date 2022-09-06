@@ -13,11 +13,11 @@ menu.addEventListener('click', mobileMenu)
 // Show active menu when scrolling
 
 const highlightMenu = () => {
-    const elem = document.querySelector('.highlight')
-    const homeMenu = document.querySelector('#home-page')
-    const aboutMenu = document.querySelector('#about-page')
-    const servicesMenu = document.querySelector('#resume-page')
-    let scrollPos = window.scrollY
+    const elem = document.querySelector('.highlight');
+    const homeMenu = document.querySelector('#home-page');
+    const eduMenu = document.querySelector('#edu-page');
+    const aboutMenu = document.querySelector('#about-page');
+    let scrollPos = window.scrollY;
    
 
     // adds highlight class to the menu items
@@ -25,16 +25,16 @@ const highlightMenu = () => {
    // adds 'highlight' class to my menu items
   if (window.innerWidth > 960 && scrollPos < 600) {
     homeMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
+    eduMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    aboutMenu.classList.add('highlight');
+    eduMenu.classList.add('highlight');
     homeMenu.classList.remove('highlight');
-    servicesMenu.classList.remove('highlight');
+    aboutMenu.classList.remove('highlight');
     return;
   } else if (window.innerWidth > 960 && scrollPos < 2345) {
-    servicesMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
+    aboutMenu.classList.add('highlight');
+    eduMenu.classList.remove('highlight');
     return;
   }
 
